@@ -3,7 +3,7 @@ decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of 
 
 As stated above, as far as i'm aware, there doesn't exist any copy of nsdec (the original decryptor for script files in the visual novel engine NScripter) for systems other than windows, and it is close-source like its engine. (original sdk at http://nscripter.insani.org/sdk.html)<br>
 
-Usage:
+Usage:<br>
   for decrypting a script:<br>
   <ol>
     <li>Place the executable in the same folder as the script file named nscript.dat</li>
