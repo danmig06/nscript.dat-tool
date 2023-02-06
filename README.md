@@ -15,7 +15,7 @@ As stated above, as far as i'm aware, there doesn't exist any copy of nsdec (the
 <h2>Compiling from source:</h2>
   <b>NOTE: you will need a compiler that support C99 or later</b> <br><br>
   for Linux:<br>
-  ```gcc -o rdat.out rdat.c && chmod +x rdat.out```<br><br>
+  $: gcc -o rdat.out rdat.c && chmod +x ./rdat.out <br><br>
   for Windows:<br>
-  ```gcc -o rdat.exe rdat.c```<br>
+  > gcc -o rdat.exe rdat.c <br>
  
