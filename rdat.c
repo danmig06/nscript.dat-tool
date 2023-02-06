@@ -13,7 +13,7 @@ void write(FILE* src, FILE* out) {
 	while(1) {
 		int wq = fread(buffer, 1, bsize, src);
 		for(i = 0; i < bsize; i++)
-			buffer[i] ^= 0x84;
+			buffer[i] ^= 0x84; //the algorithm inverts the 8th and 3rd bit (from right to left) in every single byte
 		if(fwrite(buffer, wq, 1, out) == 0)
 			printf("failed to write to file\n");
 		if(feof(src))
