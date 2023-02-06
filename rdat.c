@@ -1,8 +1,8 @@
 #ifdef _WIN32
-#include <stdlib.h>
+#include <stdlib.h> //pause at the end of the program
 #endif
 #ifdef __unix__
-#include <stdlib.h>
+#include <stdlib.h> //pause at the end of the program
 #endif
 #include <stdio.h>
 #define bsize 32 // buffer size
@@ -15,7 +15,7 @@ void write(FILE* src, FILE* out) {
 		for(i = 0; i < bsize; i++)
 			buffer[i] ^= 0x84;
 		if(fwrite(buffer, wq, 1, out) == 0)
-			printf("failed to write\n");
+			printf("failed to write to file\n");
 		if(feof(src))
 			break;
 	}
@@ -25,7 +25,6 @@ void write(FILE* src, FILE* out) {
 }
 
 void main() {
-	int i;
 	FILE* src = fopen("nscript.dat", "r+b");
 	if(src == NULL) {
 		printf("unable to find/open nscript.dat, searching for nscript.txt...\n");
