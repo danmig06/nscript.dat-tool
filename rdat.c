@@ -40,6 +40,12 @@ void main() {
 		}
 		write(src, out);
 		printf("nscript.txt encrypted in nscript.dat\n");
+		#ifdef _WIN32
+		system("pause");
+		#endif
+		#ifdef __unix__
+		system("bash -c 'read -r -p \"Press any key to continue...\" && command'");
+		#endif
 		return;
 	}
 	FILE* out = fopen("nscript.txt", "w+b");
