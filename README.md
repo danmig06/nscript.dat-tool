@@ -1,5 +1,5 @@
 # nscript.dat-tool
-this is a decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of the original windows-only nsdec.exe tool, it should (because it seems that every game written in NScripter uses scripts in the same format) work with every game that uses the engine, like Higurashi/Umineko no Naku Koro ni (the original 200X versions) by 07th Expansion, Tsukihime (the 2000 version) by TYPE-MOON and narcissu (1st and 2nd) by Stage-nana.<br>
+this is a decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of the original windows-only nsdec.exe tool, it should (because it seems that every game written in NScripter uses scripts in the same format) work with every game that uses the engine, Tsukihime (the 2000 version) by TYPE-MOON and narcissu (1st and 2nd) by Stage-nana.<br>
 
 As stated above, as far as i'm aware, there doesn't exist any copy of nsdec (the original decryptor for script files in the visual novel engine NScripter) and nscmake (the encryptor) for systems other than windows, and it is close-source like its engine. (original sdk at http://nscripter.insani.org/sdk.html)<br>
 
