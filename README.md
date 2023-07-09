@@ -1,7 +1,15 @@
 # nscript.dat-tool
-this is a decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of the original windows-only nsdec.exe tool, it should (because it seems that every game written in NScripter uses scripts in the same format) work with every game that uses 1.0/2.0 version the engine, for example Tsukihime (the 2000 version) by TYPE-MOON and narcissu (1st and 2nd) by Stage-nana, rest of the list <a href="https://en.m.wikipedia.org/wiki/Category:NScripter_games">here</a><br>
+this is a decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of the original windows-only nsdec.exe tool, it <b>should</b> (because it seems that every game written in NScripter either uses scripts in this format, use plaintext as a script, or put the script in an archive file) work with every game that uses 1.0/2.0 version the engine and use "compiled" scripts, the games i saw that fall in this category are:<br>
+<ul>  
+<li>Tsukihime (the 2000 version) by TYPE-MOON</li>
+<li>Kagetsu Tohya (2001) by TYPE-MOON</li>
+<li>Rose Guns Days (2012) by 07th Expantion</li>
+<li>Tsuki wa Higashi ni wa Nishi ni (2003) by AUGUST</li>
+</ul><br>
+of course, these are only the games that i know use compiled nscript.dat files as their script, if you spot a nscript.dat file in a game's directory, this tool should work anyway, as for the newer version of the engine, P(progressive)O(open)Nscripter, i have not yet tested the algorithm aganist pscript.dat, that i personally think is encoded in a similar manner, i recommend to try that as well, as a fun fact, games that use plaintext, like Umineko no Naku Koro ni (by 07th Expansion) use a file called 0.u as their script<br>
+you can find the list of all the games that use NScripter <a href="https://en.m.wikipedia.org/wiki/Category:NScripter_games">here</a>.<br>
 
-As stated above, as far as i'm aware, there doesn't exist any copy of nsdec (the original decryptor for script files in the visual novel engine NScripter) and nscmake (the encryptor) for systems other than windows, and it is close-source like its engine. (original sdk at http://nscripter.insani.org/sdk.html)<br>
+As stated in the beginning, as far as i'm aware, there doesn't exist any version of nsdec (the original decryptor for script files in the visual novel engine NScripter) and nscmake (the encryptor) for systems other than windows, and it is close-source like its engine. (original sdk at http://nscripter.insani.org/sdk.html)<br>
 
 <h2>Usage:</h2>
   <b>to decrypt a script </b>
