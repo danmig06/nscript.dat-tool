@@ -1,15 +1,11 @@
 # nscript.dat-tool
-this is a decryptor/encryptor for NScripter's nscript.dat files, a reverse engineering of the original windows-only nsdec.exe tool, it <b>should</b> (because it seems that every game written in NScripter either uses scripts in this format, use plaintext as a script, or put the script in an archive file) work with every game that uses 1.0/2.0 version the engine and use "compiled" scripts, the games i saw that fall in this category are:<br>
-<ul>  
-<li>Tsukihime (the 2000 version) by TYPE-MOON</li>
-<li>Kagetsu Tohya (2001) by TYPE-MOON</li>
-<li>Rose Guns Days (2012) by 07th Expantion</li>
-<li>Tsuki wa Higashi ni wa Nishi ni (2003) by AUGUST</li>
-</ul><br>
-of course, these are only the games that i know use compiled nscript.dat files as their script, if you spot a nscript.dat file in a game's directory, this tool should work anyway, as for the newer version of the engine, P(progressive)O(open)Nscripter, i have not yet tested the algorithm aganist pscript.dat, that i personally think is encoded in a similar manner, i recommend to try that as well, as a fun fact, games that use plaintext, like Umineko no Naku Koro ni (by 07th Expansion) use a file called 0.u as their script<br>
+this is a decryptor/encryptor for NScripter's nscript.dat files and a reverse engineering of the original windows-only nsdec.exe tool, its algorithm boils down to, for every single byte, XORing it with the value 0x84 (decimal 132), basically inverting the 8th and 3rd bits starting from the left, and this is not the only encoding the engine supports, it seems that every game written in NScripter either uses scripts in this format (.dat), use plaintext as their script (not only .txt, but .u and .utf as well), or put the script in an archive file (such as arc.nsa or arc.sar).<br>
+this tool will <b>only</b> work with every game that uses the engine and uses "compiled" scripts with .dat extentions, that heavily depends on what version of the game you have, and thus can be used on any of the visual novels in the list below as long as you see a nscript.dat file in a game's directory and follow the steps at the botton of this file, this tool should do the work for you.
+As for the newer version of the engine, P(proportional)O(open)Nscripter, i have not yet tested the algorithm aganist pscript.dat, that i personally think is encoded in a similar manner, i recommend to try that as well.<br>
 you can find the list of all the games that use NScripter <a href="https://en.m.wikipedia.org/wiki/Category:NScripter_games">here</a>.<br>
 
-As stated in the beginning, as far as i'm aware, there doesn't exist any version of nsdec (the original decryptor for script files in the visual novel engine NScripter) and nscmake (the encryptor) for systems other than windows, and it is close-source like its engine. (original sdk at http://nscripter.insani.org/sdk.html)<br>
+<h1>Why did i make this</h1>
+As stated in the beginning, as far as i'm aware, there doesn't exist any version of nsdec (the original decryptor for script files in the visual novel engine NScripter) and nscmake (the encryptor) for systems other than windows, and it is close-source like its SDK. (original sdk at http://nscripter.insani.org/sdk.html)<br>
 
 <h2>Usage:</h2>
   <b>to decrypt a script </b>
