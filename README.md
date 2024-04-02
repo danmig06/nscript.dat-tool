@@ -1,7 +1,7 @@
 # nscript.dat-tool
 this is a decryptor/encryptor for NScripter's nscript.dat files and a reverse engineering of the original windows-only nsdec.exe tool, its algorithm boils down to XORing every single byte in the file with the value 0x84 (decimal 132), basically inverting the 8th and 3rd bits starting from the right, and this is not the only encoding the engine supports, it seems that every game written in NScripter either uses scripts in this format (.dat), uses plaintext as its script (not only .txt, but .u and .utf as well), or put the script in an archive file (such as arc.nsa or arc.sar).<br>
 this tool will <b>only</b> work with NScripter games that use "compiled" scripts with .dat extentions, that heavily depends on what version of the game you have, and thus can be used on any of the visual novels in the list below as long as you see a nscript.dat file in a game's directory, then follow the steps at the bottom of this file and this tool should do the work for you.
-As for the newer version of the engine, P(proportional)O(open)Nscripter, i have not yet tested the algorithm aganist pscript.dat, that i personally think is encoded in a similar manner, i recommend to try that as well.<br>
+As for the newer version of the engine, P(proportional)O(open)Nscripter, i have not tested this algorithm aganist pscript.dat, which i personally think is encoded in a similar manner, i recommend trying that as well.<br>
 you can find the list of all the games that use NScripter <a href="https://en.m.wikipedia.org/wiki/Category:NScripter_games">here</a>.<br>
 
 <h1>Why did i make this</h1>
